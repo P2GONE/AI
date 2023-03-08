@@ -55,3 +55,7 @@ kn.fit(X_train, y_train)
 prediction = kn.predict(X_test)
 kn.score(X_test, y_test)
 print("테스트 세트 정확도: {:.2f}".format(kn.score(X_test, y_test)))
+
+
+테스트를 많이 해본 결과 정확도를 높이는 값은 24 였고 다음과 같은 정확도가 나왔습니다.
+0.956140350877193
