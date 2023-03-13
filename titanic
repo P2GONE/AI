@@ -1,0 +1,5 @@
+import numpy as np
+import pandas as pd
+import seaborn as sns
+
+features = pd.read_csv('titanic.csv', index_col = 0)
