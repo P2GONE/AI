@@ -1,0 +1,57 @@
+data1.isna().sum()
+data1['Age'].fillna(data1['Age'].median(), inplace = True)
+//Age 결측치를 중앙값으로 채우기
+data1.drop('Cabin', axis=1, inplace=True) 
+//어려운 데이터는 삭제하기
+
+
+  df = df.dropna() 
+  //결측치가 있는 행은 전부 삭
+  df = df.dropna(axis = 1)
+  //결측치가 있는 열은 전부 삭제
+   df = df.dropna(how = 'all')
+  //행 전체가 결측치인 행만 삭제
+   df = df.dropna(thresh = 2)
+   //행의 결측치가 2개 초과인 행만 삭제
+   
+  df = df.dropna(subset=['col1', 'col2', 'col3'])
+  # 특정열 모두가 결측치일 경우 해당 행 삭제
+  df = df.dropna(subset=['col1', 'col2', 'col3'], how = 'all')
+  # 특정열에 1개 초과의 결측치가 있을 경우 해당 행 삭제
+  df = df.dropna(subset=['col1', 'col2', 'col3'], thresh = 1 )
+  //<특정 열들중에 결측치가 있을 경우에 해당 행을 삭제>
+  
+  
+  
+    df.dropna(inplace = True) // 결측치 모두 삭제
+    df.fillna(0) // 전체 결측치를 특정 단일값으로 대체하기
+      
+  # 0으로 대체하기
+  df['col'] = df['col'].fillna(0)
+
+  # 컬럼의 평균으로 대체하기
+  df['col'] = df['col'].fillna(df['col'].mean())
+  
+  #결측치 평균으로 대체
+  df = df.fillna(df.mean())
+  
+  #A열의 결측 값만 평균 값으로 바꾸기
+  df.loc[df['A'] != df['A'], 'A'] = df['A'].mean()
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
